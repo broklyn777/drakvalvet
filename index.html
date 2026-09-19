@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Drakvalvet v017 – Prolog: Vakttornet</title>
+<title>Drakvalvet v018 – Prolog: Vakttornet</title>
 <style>
   :root{
     --bg:#11100d;
@@ -201,7 +201,7 @@
     #story{font-size:17px}
   }
 
-  /* v017 ------------------------------------------------------------ */
+  /* v018 ------------------------------------------------------------ */
   .mp-badge{
     position:fixed;right:12px;bottom:12px;z-index:1200;
     background:#17140f;border:1px solid #7a632f;border-radius:999px;
@@ -258,7 +258,7 @@
   .ability-desc{font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px}
   .ability-used{opacity:.55}
 
-  /* v017 combat UI -------------------------------------------------- */
+  /* v018 combat UI -------------------------------------------------- */
   .combat-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
   .combat-enemies{display:grid;gap:7px;margin:10px 0 8px}
   .combat-enemy-card{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 11px;border:1px solid #40372b;border-radius:8px;background:#17130f}
@@ -302,7 +302,7 @@
 <div class="wrap">
   <main class="card main">
     <h1>Drakvalvet</h1>
-    <div class="sub">Prolog: Vakttornet vid Gråskogen · v017</div>
+    <div class="sub">Prolog: Vakttornet vid Gråskogen · v018</div>
     <div id="story"></div>
     <div id="combat"></div>
     <div id="choices" class="choices"></div>
@@ -398,7 +398,7 @@
   </div>
 </div>
 
-<div id="mpBadge" class="mp-badge">v017 · startar</div>
+<div id="mpBadge" class="mp-badge">v018 · startar</div>
 <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"></script>
 <script>
 const state = {
@@ -535,61 +535,17 @@ const scenes = {
     text:()=>{
       const multi = typeof mp!=="undefined" && mp.mode==="multi";
       return multi ? [
-        "Värmen slår emot er redan när dörren öppnas.",
-        "Det luktar vedrök, våt ull och något kryddigt som puttrar över elden. Några resande sitter utspridda vid borden. En hund sover hoprullad under en bänk, och bakom disken torkar värdshusvärden långsamt ett stop med en trasa som sett bättre dagar.",
-        "För ett ögonblick känns resan genom regnet långt borta.",
-        "Sedan lägger ni märke till mannen vid elden.",
-        "Han sitter ensam trots att rummet är nästan fullt. Grå ullkappa, grova händer och ett ansikte som ser ut att ha tillbringat fler år utomhus än under tak. På bordet framför honom ligger en karta, nedtyngd av en tom ölkanna.",
-        "Ett ensamt kryss är ritat där skogen blir som tätast.",
-        "När han ser att ni tittar på kartan gör han ingen ansats att dölja den.",
-        "“På väg mot Skogsby?”",
-        "Hans röst är låg. Nästan vardaglig.",
-        "Ni nickar.",
-        "Mannen ser mot regnet som rinner längs rutorna.",
-        "“Då kommer ni nära nog.”",
-        "Han knackar med ett finger mot krysset på kartan.",
-        "“Vakttornet. Tre jägare gick dit för fyra dagar sedan.”",
-        "Han låter fingret vila kvar där.",
-        "“Ingen av dem kom tillbaka.”",
-        "Ett vedträ spricker inne i elden.",
-        "Ingen annan i rummet verkar reagera.",
-        "Mannen fortsätter:",
-        "“I natt såg vi ljus mellan träden.”",
-        "Innan ni hinner svara hörs hovslag ute i mörkret.",
-        "Snabba.",
-        "Ojämna.",
-        "Sedan ett rop.",
-        "Kort.",
-        "Avhugget.",
-        "Och ett tungt slag mot ytterdörren."
+        "Värmen slår emot er när dörren öppnas. Det luktar vedrök, våt ull och mat från grytan över elden.",
+        "Vid ett av borden sitter en äldre man i grå ullkappa. Framför honom ligger en karta med ett ensamt kryss där skogen blir som tätast.",
+        "“På väg mot Skogsby?” frågar han. Sedan pekar han på krysset. “Vakttornet. Tre jägare gick dit för fyra dagar sedan. Ingen kom tillbaka. I natt såg vi ljus mellan träden.”",
+        "Innan ni hinner svara hörs snabba, ojämna hovslag ute i mörkret.",
+        "Ett kort rop — sedan ett tungt slag mot ytterdörren."
       ] : [
-        "Värmen slår emot dig redan när dörren öppnas.",
-        "Det luktar vedrök, våt ull och något kryddigt som puttrar över elden. Några resande sitter utspridda vid borden. En hund sover hoprullad under en bänk, och bakom disken torkar värdshusvärden långsamt ett stop med en trasa som sett bättre dagar.",
-        "För ett ögonblick känns resan genom regnet långt borta.",
-        "Sedan lägger du märke till mannen vid elden.",
-        "Han sitter ensam trots att rummet är nästan fullt. Grå ullkappa, grova händer och ett ansikte som ser ut att ha tillbringat fler år utomhus än under tak. På bordet framför honom ligger en karta, nedtyngd av en tom ölkanna.",
-        "Ett ensamt kryss är ritat där skogen blir som tätast.",
-        "När han ser att du tittar på kartan gör han ingen ansats att dölja den.",
-        "“På väg mot Skogsby?”",
-        "Hans röst är låg. Nästan vardaglig.",
-        "Du nickar.",
-        "Mannen ser mot regnet som rinner längs rutorna.",
-        "“Då kommer du nära nog.”",
-        "Han knackar med ett finger mot krysset på kartan.",
-        "“Vakttornet. Tre jägare gick dit för fyra dagar sedan.”",
-        "Han låter fingret vila kvar där.",
-        "“Ingen av dem kom tillbaka.”",
-        "Ett vedträ spricker inne i elden.",
-        "Ingen annan i rummet verkar reagera.",
-        "Mannen fortsätter:",
-        "“I natt såg vi ljus mellan träden.”",
-        "Innan du hinner svara hörs hovslag ute i mörkret.",
-        "Snabba.",
-        "Ojämna.",
-        "Sedan ett rop.",
-        "Kort.",
-        "Avhugget.",
-        "Och ett tungt slag mot ytterdörren."
+        "Värmen slår emot dig när dörren öppnas. Det luktar vedrök, våt ull och mat från grytan över elden.",
+        "Vid ett av borden sitter en äldre man i grå ullkappa. Framför honom ligger en karta med ett ensamt kryss där skogen blir som tätast.",
+        "“På väg mot Skogsby?” frågar han. Sedan pekar han på krysset. “Vakttornet. Tre jägare gick dit för fyra dagar sedan. Ingen kom tillbaka. I natt såg vi ljus mellan träden.”",
+        "Innan du hinner svara hörs snabba, ojämna hovslag ute i mörkret.",
+        "Ett kort rop — sedan ett tungt slag mot ytterdörren."
       ];
     },
     choices:[
@@ -1698,12 +1654,12 @@ function gameOver(){
   document.getElementById("choices").appendChild(b);
 }
 
-/* v017 starts below. */
+/* v018 starts below. */
 </script>
 
 <script>
 /* =====================================================================
-   DRAKVALVET v017
+   DRAKVALVET v018
    - One to four separate player characters.
    - Shared story/world and enemies.
    - Separate HP, XP, inventory and equipment.
@@ -1880,7 +1836,7 @@ function mpRenderMenu(){
   document.getElementById("choices").innerHTML="";
   document.getElementById("story").innerHTML=`
     <div class="mp-start">
-      <h2>Drakvalvet v017</h2>
+      <h2>Drakvalvet v018</h2>
       <p>Spela ensam eller tillsammans med upp till fyra personer. Varje spelare har en egen rollperson med separat HP, XP och utrustning, medan gruppen delar berättelse och världsval.</p>
       <div class="mp-grid">
         <div class="mp-card">
@@ -1907,13 +1863,13 @@ function mpRenderMenu(){
       <div class="mp-note"><strong>Strid:</strong> Svårigheten skalas automatiskt efter gruppens storlek. Större grupper möter fler fiender och tåligare bossar, utan att ändra storyn.</div>
     </div>`;
   updateUI();
-  mpBadge("v017 · meny");
+  mpBadge("v018 · meny");
 }
 
 function mpStartSolo(){
   resetWorld();
   mp.mode="solo";
-  mpBadge("v017 · solo");
+  mpBadge("v018 · solo");
   beginCharacterCreation();
 }
 
@@ -1936,7 +1892,7 @@ function mpCreateHost(size=2){
       <button onclick="mpDisconnect()">Avbryt</button>
     </div>`;
   mpUpdatePartyPanel();
-  mpBadge(`v017 · host ${mp.code}`);
+  mpBadge(`v018 · host ${mp.code}`);
   try{
     mp.peer=new Peer("drakvalvet-"+mp.code.toLowerCase());
     mp.peer.on("open",()=>{
@@ -1974,7 +1930,7 @@ function mpShowJoin(){
     </div>`;
   mpUpdatePartyPanel();
   setTimeout(()=>document.getElementById("mpJoinCode")?.focus(),50);
-  mpBadge("v017 · gäst");
+  mpBadge("v018 · gäst");
 }
 
 function mpJoinHost(){
@@ -2008,7 +1964,7 @@ function mpWire(conn, assignedIndex=null){
         el.className="mp-note mp-connected";
         el.innerHTML=`<strong>${joined} av ${mp.partySize-1} gäster anslutna.</strong> Kod: <strong>${mp.code}</strong>.`;
       }
-      mpBadge(`v017 · P1 host · ${mpConnectedGuestCount()+1}/${mp.partySize}`,true);
+      mpBadge(`v018 · P1 host · ${mpConnectedGuestCount()+1}/${mp.partySize}`,true);
       if(!mp.players[0] && mp.scene==="creation") setTimeout(()=>mpRenderCreation(),250);
       mpBroadcast();
     }else{
@@ -2040,13 +1996,13 @@ function mpHandleData(data, actorIndex=null){
     if(data.type==="roomFull"){
       const el=document.getElementById("mpJoinStatus");
       if(el){ el.className="mp-note bad"; el.textContent="Spelrummet är fullt."; }
-      mpBadge("v017 · rummet fullt");
+      mpBadge("v018 · rummet fullt");
       return;
     }
     if(data.type==="welcome"){
       mp.localIndex=Number(data.index);
       mp.partySize=Math.max(2,Math.min(4,Number(data.partySize)||2));
-      mpBadge(`v017 · P${mp.localIndex+1} · ansluten`,true);
+      mpBadge(`v018 · P${mp.localIndex+1} · ansluten`,true);
       const el=document.getElementById("mpJoinStatus");
       if(el){ el.className="mp-note mp-connected"; el.textContent=`Ansluten som Spelare ${mp.localIndex+1}.`; }
       setTimeout(()=>mpRenderCreation(),150);
@@ -2751,7 +2707,7 @@ function mpConnectionLost(index=null){
   if(mp.role==="host" && index!=null){
     delete mp.conns[index];
     mp.connected=mpConnectedGuestCount()>0;
-    mpBadge(`v017 · P1 host · ${mpConnectedGuestCount()+1}/${mp.partySize}`);
+    mpBadge(`v018 · P1 host · ${mpConnectedGuestCount()+1}/${mp.partySize}`);
     const el=document.getElementById("mpHostStatus");
     if(el){ el.className="mp-note mp-wait"; el.innerHTML=`Spelare ${index+1} tappade anslutningen. Kod: <strong>${mp.code}</strong>.`; }
     mpUpdatePartyPanel();
@@ -2759,7 +2715,7 @@ function mpConnectionLost(index=null){
   }
   if(!mp.connected) return;
   mp.connected=false;
-  mpBadge("v017 · anslutning bruten");
+  mpBadge("v018 · anslutning bruten");
   const box=document.getElementById("choices");
   if(box) box.insertAdjacentHTML("afterbegin",`<div class="mp-note">Anslutningen bröts. Starta ett nytt rum för att fortsätta multiplayer-testet.</div>`);
 }
@@ -2773,7 +2729,7 @@ function mpPeerError(err){
       :`Anslutningsfel: ${err?.type||err?.message||"okänt fel"}`;
   const el=document.getElementById("mpHostStatus")||document.getElementById("mpJoinStatus");
   if(el){ el.className="mp-note bad"; el.textContent=msg; }
-  mpBadge("v017 · anslutningsfel");
+  mpBadge("v018 · anslutningsfel");
 }
 
 function mpFatal(msg){
@@ -2795,7 +2751,7 @@ usePotionOutsideCombat=function(){
   const p=mp.players[mp.localIndex];
   if(!p || p.potions<=0 || p.hp>=p.maxHp) return;
   if(mp.role==="guest"){
-    // Outside-combat item usage is intentionally host-authoritative in v017.
+    // Outside-combat item usage is intentionally host-authoritative in v018.
     mpSend({type:"action",action:"outsidePotion"});
     return;
   }
